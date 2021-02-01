@@ -1,0 +1,464 @@
+@charset "utf-8";
+/*main.css*/
+
+/**********************공통부분*********************/
+html,
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: "Malgun Gothic", 맑은고딕, dotum, 돋움, sans-serif, Arial;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bld {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*********************1. 상단영역***********************/
+
+/*상단영역전체*/
+#top {
+    position: relative;
+    /*    width: 1280px;*/
+    height: 120px;
+}
+
+#top::before {
+    content: '';
+    position: absolute;
+    /*부모는? #top*/
+    width: 100%;
+    height: 45px;
+    background: #0070bd;
+    bottom: 0;
+}
+#top::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 120px;
+    background-color: #fff;
+    border-bottom: 1px solid #0070bd;
+    z-index: 2;
+    transition: height .5s ease-out;
+}
+/*상단영역*/
+.top {
+    position: relative;
+    width: 960px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+
+/*로고부분*/
+.mlogo {
+    position: absolute;
+    display: inline-block;
+    /*outline: 2px solid blue;*/
+}
+
+.mlogo a:first-child::after {
+    content: "|";
+    margin: 20px;
+}
+
+/*sns부분*/
+.sns {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    /*outline: 2px solid black;*/
+}
+
+/*전체메뉴부분*/
+.gnb {
+    position: relative;
+    top: 75px;
+    left: -145px;
+    width: 100%;
+    background: #0070bd;
+}
+.gnb ul {
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    padding-left: 202.5px;
+}
+
+.gnb ul li {
+    width: 175px;
+    height: 45px;
+    float: left;
+    /*outline: 2px solid black;*/
+}
+
+.gnb > ul > li > a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    line-height: 45px;
+}
+.gnb ol a {
+    display: block;
+    height: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+    line-height: 45px;
+}
+
+.smenu {
+    position: absolute;
+    padding-left: 20px;
+    width: 175px;
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease-out;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.smenu li {
+    width: 100%;
+}
+
+.gnb > ul:hover .smenu,
+#top.on::after{
+    height: 270px;
+}
+
+/***********************2. 배너영역 *********************/
+/*배너전체박스*/
+#ban {
+    position: relative;
+    width: 100%;
+    height: 554px;
+    overflow: hidden;
+}
+
+/*각 배너박스*/
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+}
+.slider li {
+    width: 33.333%;
+    height: 100%;
+    float: left;
+}
+
+
+
+.slider li.ban1 {
+    background: url(../images/banner1.png) no-repeat center 0 #fdf7e8;
+}
+
+.slider li.ban2 {
+    background: url(../images/banner2.png) no-repeat center 0 #fdf7e8;
+}
+
+.slider li.ban3 {
+    background: url(../images/banner3.png) no-repeat center 0 #fdf7e8;
+}
+
+.abtn {
+    position: relative;
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /*outline: 1px solid red;*/
+}
+
+.lb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.rb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+
+
+/***********************3. 컨텐츠영역*******************/
+
+#cont {
+    width: 100%;
+}
+
+.cont {
+    position: relative;
+    width: 960px;
+    height: 320px;
+    margin: 0 auto;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+}
+
+/*공지사항과 새소식박스*/
+.lbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 320px;
+    padding: 15px 20px 0 20px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #f3f3f3;
+    box-sizing: border-box;
+}
+
+.txt a {
+    text-decoration: none;
+}
+
+.txt > a {
+    font-weight: bold;
+    color: #777;
+    font-size: 20px;
+    padding: 0 0 20px 0;
+}
+
+.txt > a:first-child {
+    color: #e56c00;
+}
+
+.txt > a:first-child::after {
+    content: url(../images/bar.gif);
+    padding: 0 5px 0 10px;
+}
+
+.list {
+    width: 100%;
+    padding-top: 10px;
+    /*outline: 1px solid red;*/
+}
+
+.list li {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px;
+}
+
+.list li::before {
+    content: url(../images/dot.gif);
+    position: absolute;
+    left: 10px;
+}
+
+.list a {
+    color: #444;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+/*묻고답하기 박스*/
+.mbox {
+    position: absolute;
+    top: 0;
+    left: 320px;
+    width: 320px;
+    height: 320px;
+    padding: 15px 20px 0 20px;
+    border-right: 1px solid #e4e4e4;
+    box-sizing: border-box;
+}
+
+.mbox.txt > a:first-child::after {
+    display: none;
+}
+
+
+
+
+/*페이스북 영역*/
+.rbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+
+.tabTit {
+    width: 100%;
+    height: 50px;
+    /*outline: 1px solid red;*/
+}
+
+.tabTit li {
+    width: 50%;
+    height: 100%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+}
+
+.tabTit li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.tabTit li + li {
+    border-left: 1px solid #ccc;
+}
+
+.tabTit a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 48px;
+    color: #444;
+}
+
+.tabTit li.on {
+    border-bottom: none;
+}
+
+.tabTit li.on a {
+    color: #0070bd;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.tabTxt {
+    width: 100%;
+    height: 270px;
+}
+
+.tabTxt li {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tabTxt li:nth-child(1) {
+    /*background-color: #000;*/
+}
+
+.tabTxt li:nth-child(2) img {
+    /*background-color: #777;*/
+    width: 100%;
+    height: 100%;
+}
+
+.tabTxt li.on {
+    display: block;
+}
+
+/**********************4. 하단영역***********************/
+/*하단전체*/
+#bottom {
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+    background: #444;
+}
+
+.footer {
+    position: relative;
+    width: 960px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.info {
+    padding: 30px 0 0 0;
+}
+
+/*회사정보 옆으로 흐르기*/
+.info ul li {
+    float: left;
+}
+
+.info ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*a요소 옆에 이미지로 | 모양넣기*/
+.first li a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 0 12px;
+    background: url(../images/bar.gif) no-repeat left 5px;
+}
+
+/*a요소 이미지없애고 왼쪽으로 달라붙기*/
+.first li:first-child a {
+    background: none;
+    padding-left: 0;
+}
+
+/*2번째 a요소만 빨갛게*/
+.first li:nth-child(2) a {
+    color: red;
+}
+
+/*회사주소*/
+.p1 {
+    margin-top: 15px;
+    color: #aaa;
+}
+
+.p2 {
+    margin-top: 5px;
+    color: #aaa;
+}
+
+/*관련기관*/
+#select {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 228px;
+    height: 26px;
+    background: #656565;
+    color: #fff;
+    border: 1px solid #656565;
+}
