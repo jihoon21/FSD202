@@ -1,0 +1,273 @@
+@charset "utf-8";
+/*극장만들기 메인CSS - main.css*/
+
+
+html,
+body,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/*전체배경색*/
+body {
+    /*검정색배경*/
+    background-color: #000;
+    /*흰색글씨*/
+    color: #fff;
+}
+
+/*공통 레이아웃class*/
+.part {
+    width: 1200px;
+    margin: 0 auto;
+    /*outline: 3px dashed lime;*/
+}
+
+
+/*A. 상단영역*/
+#top {
+    position: relative;
+    height: 100px;
+}
+
+/*B. 메인영역*/
+#cont {
+    position: relative;
+    height: 788px;
+}
+
+/*C. 하단영역*/
+#info {
+    position: relative;
+    height: 110px;
+}
+
+/*1. 메인로고*/
+.tit img {
+    height: 100%;
+    width: 300px;
+    height: 100px;
+    display: block;
+    /*outline: 2px solid yellow;*/
+
+}
+
+/*2. GNB메뉴*/
+.gnb {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    
+}
+
+.gnb ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /*outline: 2px solid red;*/
+}
+.gnb ul::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.gnb ul li {
+    position: relative;
+    margin-left: -30px;
+    width: 130px;
+    text-align: center;
+    float: left;
+    padding: 0 10px;
+    
+}
+
+.gnb ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*서브메뉴박스*/
+.smenu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /*부모? 싸고있는 .gnb ul>li*/
+    transform: translateX(-65%);
+    /*가로중앙이동*/
+    width: 100px;
+    padding: 5px;
+    padding-left: 40px;
+        height: 0;
+/*    outline: 12px solid aqua;*/
+    overflow: hidden;
+    /*처음에 서브메뉴 안보임!*/
+    transition: height .6s ease-in-out;
+    
+}
+.gnb ul:hover>li .smenu{
+    height: 75px;
+}
+
+/*마우스 오버시 하위메뉴 보이기*/
+.gnb ul>li:hover .smenu {
+    display: block;
+}
+
+.smenu ol{
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+
+/*3. 인트로 재생영역*/
+#screen {
+    position: absolute;
+    top: 140px;
+    left: 0px;
+    width: 1200px;
+    height: 788px;
+    background-image: url(../images/bg.jpg);
+    background-color: #f00;
+}
+
+/*스크린 아이프레임*/
+#screen iframe {
+    position: absolute;
+    top: -100px;
+    left: 200px;
+    width: 800px;
+    height: 50%;
+    border: 0;
+}
+/*4. 영화선택메뉴*/
+.mlist {
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    overflow: hidden;
+}
+
+.mlist ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    /*outline: 12px solid cyan;*/
+}
+
+.mlist ul li {
+    float: left;
+    padding: 0 30px;
+}
+
+.mlist img {
+    width: 300px;
+    height: 200px;
+}
+
+/*영화정보박스*/
+.movtxt{
+    position: absolute;
+    top: 100%;
+    width: 300px;
+    height: 200px;
+    
+    text-align: center;
+    font-size: 25px;
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    transition: top .4s ease-out;
+    
+    /*outline: 2px solid pink;*/
+}
+.mlist>ul>li:hover .movtxt{
+    top: 0;
+}
+.movtxt li:first-child{
+    font-size: 30px;
+    color: #ff8b8b;
+    font-family: cursive;
+}
+
+/*5. 하단로고 이미지*/
+#info address img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 70px;
+}
+
+/*6.회사정보박스*/
+#info address {
+    font-style: normal;
+    /*address요소의 기본 이탤릭 해제*/
+    font-size: 14px;
+    line-height: 15px;
+    /*안쪽여백*/
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+/*7. SNS아이콘*/
+.sns {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sns li {
+    float: left;
+    width: 34px;
+    height: 34px;
+    margin: 2px;
+
+    background: url(../images/sprites_logo.png) no-repeat;
+    /*outline: 2px solid red;*/
+}
+
+
+.sns li:first-child {
+    /*페이스북*/
+    background-position: -509px -429px;
+}
+
+.sns li:nth-child(2) {
+    /*트위터*/
+    background-position: -551px -429px;
+}
+
+.sns li:last-child {
+    /*인스타그램*/
+    background-position: -593px -429px;
+}
+
+/*a요소 확장*/
+.sns a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*IR(배경이미지 설명)*/
+.bld {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JiHoon Intro Site</title>
+    
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*배경이미지*/
+        body {
+            background: url(images/bg.jpg) no-repeat 100%/cover;
+        }
+
+        /*전체박스*/
+        .wrap {
+            width: 1100px;
+            box-sizing: border-box;
+
+        }
+        
+
+        /*제목*/
+        .tit {
+            font-size: 50px;
+            font-family: cursive;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            text-shadow: 3px 5px 5px #000;
+            border-bottom: 5px ridge #fff;
+        }
+        
+        /*각박스 공통*/
+        .cont>div {
+            width: 50%;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /*각박스 타이틀*/
+        .cont>div>h2 {
+            text-align: center;
+            width: 70%;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: skyblue;
+            color: #fff;
+            text-shadow: 2px 3px 3px #000;
+            border-radius: 15px 15px 15px 15px
+        }
+
+        /*각박스 리스트*/
+        .cont>div>ol {
+            font-size: 20px;
+            line-height: 35px;
+        }
+        /*각박스 a링크*/
+        .cont>div a{
+            color: #000;
+            text-decoration: none;
+        }
+        /*a요소 마우스 오버시 색바뀜*/
+        .cont>div a:hover{
+            color: #f00;
+            text-decoration-line: underline;
+        }
+        /*좌측박스*/
+        .lb {
+            border-right: 5px ridge #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!--전체부모박스-->
+    <div class="wrap">
+        <h1 class="tit">Intro Site</h1>
+        <div class="cont">
+            <!--왼쪽 프로젝트박스-->
+            <div class="lb">
+                <h2>Common Project</h2>
+                <ol>
+                    <li>
+                        <a href="http://wlgnssss.dothome.co.kr/01.Info_PJ/index.html" target="_blank">네이버요약뉴스</a>
+                    </li>
+                    <li>
+                        <a href="http://wlgnssss.dothome.co.kr/04.CGV_PJ/02.site/index.html" target="_blank">CGV PJ</a>
+                    </li>
+                    <li>
+                        <a href="http://wlgnssss.dothome.co.kr/07.WebDiary_PJ/index.html" target="_blank">Web Diary</a>
+                    </li>
+                    <li>
+                        <a href="http://wlgnssss.dothome.co.kr/08.Unpretty_PJ/index.html" target="_blank">Unpretty PJ</a>
+                    </li>
+                    <li>
+                        <a href="http://wlgnssss.dothome.co.kr/09.MyItem_PJ/02.Asset/index.html" target="_blank">MyItem PJ</a>
+                    </li>
+                </ol>
+            </div>
+
+
+            <!--오른쪽 프로젝트 박스-->
+            <div class="rb">
+                <h2>JiHoon Project</h2>
+                <ol>
+                    <li>
+                        <a href="http://wlgnssss.dothome.co.kr/04.CGV_PJ/극장만들기/movie_PJ.html" target="_blank">극장만들기</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body></html>

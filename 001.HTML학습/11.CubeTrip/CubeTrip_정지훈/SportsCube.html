@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsCube</title>
+    <link rel="stylesheet" href="css/main_sports.css">
+    <script src="js/main_sports.js"></script>
+</head>
+<body>
+   <!--1. 전체제목-->
+    <h1 class="tit">Sports Brand</h1>
+    <!--2. 메뉴버튼-->
+    <nav class="city">
+        <ul>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">출발</a>
+                <!--
+                    href는 원래 이동의 특성이 있으므로 onclick에서 함수를 호출시 클릭됨으로 인해 페이지이동(새로고침)이 되어진다. 이것을 막기위해 return false를 함수호출 뒤에 쓴다. 이것의 목적은 a태그 이동을 취소하는 것이다!(리턴폴스-돌아갈때불꺼!)
+                -->
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">나이키</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">아디다스</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">퓨마</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">언더아머</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">뉴발란스</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!--3. 큐브-->
+    <div class="cube">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+   <!--4. 브랜드설명박스-->
+   
+    <div class="cbox">
+        <article class="ctxt">
+            <h2 id="cname">뉴발란스</h2>
+            <p id="cinfo">원래 교정화 등 특수화를 만들던 회사라 그런지 발이 편한 모델이 많은 편이다. 뉴발란스는 다양한 발볼 사이즈를 제공해서 유명해진 브랜드인데, 다른 브랜드는 발 길이만으로 사이즈를 매기는 데 비해 뉴발란스는 발볼 넓이까지도 재어 판다.</p>
+        </article>
+    </div>
+   
+   
+    
+</body>
+</html>
