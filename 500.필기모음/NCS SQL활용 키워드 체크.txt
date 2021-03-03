@@ -1,0 +1,33 @@
+[ NCS SQL활용 키워드 체크 ]
+
+1. DDL, DML 구분하기
+
+2. DB 생성하기
+create database `DB명`
+
+3. 테이블 만들기 문장
+create table `테이블명`(....);
+
+4. 제약조건
+기본키(Primary Key)
+외래키(Foreign Key)
+UNIQUE KEY
+NOT NULL
+CHECK
+
+5. 선택하기
+-select 컬럼명 from 테이블명
+
+6. 입력하기
+- insert into 테이블명 () values ()
+
+7. 삭제하기
+- delete from 테이블명 where 조건문
+
+8. 수정하기
+- update 테이블명 set 컬럼명=값 where 조건문
+
+9. 조인
+
+
+10. 인덱스

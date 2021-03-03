@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*IR*/
+.bld{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*전체박스*/
+#wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+/************************* 상단영역 ************************/
+/*상단부분박스*/
+#top{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    overflow: hidden;
+}
+/*로고*/
+.logo{
+    text-align: center;    
+}
+/*메뉴*/
+.gnb{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/************************* 배너영역 ************************/
+/*전체배너박스*/
+#ban{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#ban>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/*배너이미지 등분할*/
+#ban>ul>li{
+    flex: 1;
+}
+#ban>ul>li:nth-child(1){
+    background: #1a281c url(../images/mainCon_bg1.jpg) no-repeat 50%;
+}
+#ban>ul>li:nth-child(2){
+    background: #888 url(../images/mainCon_bg2.jpg) no-repeat 50%;
+}
+#ban>ul>li:nth-child(3){
+    background: #000 url(../images/mainCon_bg3.jpg) no-repeat center;
+}
+/*텍스트 박스*/
+.mainC{
+    position: relative;
+    top: 40%;
+    left: 10%;
+    width: 90%;
+    height: 60%;
+    border: 2px solid rgba(248, 0, 0, 0);
+    box-sizing: border-box;
+}
+/*첫번째 영어텍스트(이미지)*/
+.mainC li a img{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 45%;
+}
+.con2>li>a>img,
+.con3>li>a>img{
+    width: 20%;
+}
+/*두번째 텍스트*/
+.t1{
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    font-size: 130%;
+    color: #fff;
+    letter-spacing: -2px;
+}
+/*작대기*/
+.t1::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    margin-top: 30px;
+}
+/*마지막 텍스트*/
+.t2{
+    position: absolute;
+    top: 55%;
+    left: 0%;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: -2px;
+}
+/********************* 하단 영역 **************************/
+/*하단영역*/
+#bottom{
+    position: relative;
+    width: 100%;
+    height: 182px;
+    background: #37393d;
+}
+/*정보박스*/
+.info{
+    position: absolute;
+    top: 45px;
+    line-height: 10px;
+    margin-left: 30px;
+    color: #999999;
+    letter-spacing: -1px;
+    font-size: 15px;
+    /*outline: 2px solid red;*/
+}
+.link>a{
+    text-decoration: none;
+    color: #b9b9b9;
+}
+/*첫번째글자 녹색*/
+.link>a:first-child{
+    color: #57b74e;
+}
+/*글자 사이 작대기*/
+.link>a:first-child::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #4a4c50;
+    margin: 0 1px 0 10px;
+}
+.address p{
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.address p::after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #4a4c50;
+    margin: 0 10px 0 10px;
+    
+}
+/*패밀리사이트 박스*/
+.family{
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    width: 180px;
+    height: 40px;
+    border: 2px solid #58595b;
+}
+.family>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #999999;
+}
+/*패밀리사이트 화살표*/
+.family>a::after{
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
