@@ -1,0 +1,735 @@
+@charset "utf-8";
+/*main.css*/
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /*    height: 100%;*/
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*IR*/
+.bld {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*전체박스*/
+#wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*메뉴박스*/
+#menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #37393d;
+    z-index: 9999;
+}
+
+/*로고*/
+#menu>.logo {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 238px;
+    height: 60px;
+    /*선보다 위로오게!*/
+    z-index: 1;
+
+}
+
+/*닫기이미지*/
+.close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+/*닫기이미지 마우스 오버시 커서 보이기*/
+.close:hover {
+    cursor: pointer;
+}
+
+/*각 메뉴영역*/
+#menu>ul {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#menu>ul li {
+    float: left;
+    padding-top: 294px;
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid #4b4d51;
+    letter-spacing: -2px;
+}
+
+#menu>ul li:first-child {
+    border-left: 1px solid #4b4d51;
+}
+
+/*메인텍스트*/
+#menu>ul li .mainT {
+    display: block;
+    padding: 0 60px;
+    font-size: 36px;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 70px;
+    line-height: 10px;
+}
+
+/*서브텍스트*/
+#menu>ul li .subT {
+    position: relative;
+    display: block;
+    padding: 0 60px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 20px;
+    line-height: 15px;
+}
+
+/************************* 상단영역 ************************/
+/*상단부분박스*/
+#top {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*메뉴*/
+.gnb {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*메뉴버튼 마우스오버시 마우스커서 보이기*/
+.gnb:hover {
+    cursor: pointer;
+}
+
+/************************* 배너영역 ************************/
+/*전체배너박스*/
+#ban {
+    position: relative;
+    width: 100vw;
+    height: 320vh;
+}
+
+#ban > ul {
+    position: relative;
+    width: 100%;
+    height: 320vh;
+    overflow: hidden;
+    background: #000;
+}
+
+/*배너이미지 등분할*/
+#ban > ul > li {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+#ban > ul > li:first-child {
+    width: 84%;
+}
+
+#ban > ul > li:nth-child(2) {
+    width: 8%;
+}
+
+#ban > ul > li:last-child {
+    width: 8%;
+}
+
+#ban > ul > li:nth-child(1) {
+    background: #1a281c url(../images/mainCon_bg1.jpg) no-repeat left top;
+}
+
+#ban > ul > li:nth-child(2) {
+    background: #888 url(../images/mainCon_bg2.jpg) no-repeat top;
+    opacity: 0.3;
+}
+
+#ban > ul > li:nth-child(3) {
+    background: #000 url(../images/mainCon_bg3.jpg) no-repeat top;
+    opacity: 0.3;
+}
+
+/* 영역박스 */
+.parent{
+    position: relative;
+    /* 버튼부모자격 */
+}
+
+
+/*텍스트 박스*/
+.mainC {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 60%;
+    border: 2px solid rgba(248, 0, 0, 0);
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+
+/*첫번째 영어텍스트(이미지)*/
+.mainC li a img {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+}
+
+.con2,.con3{
+    display: none;
+}
+
+/*제목 텍스트*/
+.t1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.9rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: -2px;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+
+/*작대기*/
+.t1::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+/*두번째 텍스트*/
+.t2 {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: -2px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 40px;
+}
+/*세번째 텍스트*/
+.t3{
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: -2px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 20px;
+}
+/* 닫기버튼 */
+.cbtn{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    cursor: pointer;
+    z-index: 1;
+}
+/*컨텐츠영역박스*/
+.conArea{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* outline: 2px solid red; */
+    height: 100%;
+}
+.mCont{
+    position: absolute;
+    top: 630px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 첫번째컨텐츠박스 */
+.box1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 400px;
+}
+/* 첫번째 이미지박스 */
+.box1 > .imgbox{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+/* 텍스트전체박스 */
+.conBox{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background: #fff;
+}
+/* 타이틀 */
+.txt1{
+    font-size: 32px;
+    color: #000;
+    margin-top: 80px;
+    font-weight: bold;
+}
+/* 일직선 바 */
+.bar span{
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    background: #b2b2b2;
+}
+.txt2{
+    font-size: 12px;
+    color: #797979;
+    line-height: 1.5;
+    margin-top: 15px;
+    word-break: keep-all;
+}
+/* 신청하기버튼 */
+.mBtnArea{
+    text-align: center;
+}
+/* 자세히보기버튼 */
+.mBtnArea2 {
+    margin-top: 0
+}
+/* 바탕 초록색버튼 */
+.mGrnBtn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+    width: 180px;
+    background: #3eb134;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    border-radius: 23px;
+    margin-top: 10px;
+}
+/* 바탕 회색버튼 */
+.mGrayBtn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+    width: 180px;
+    background: #c0c0c0;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    border-radius: 23px;
+    margin-top: 10px;
+}
+/* 두번째컨텐츠박스 */
+.box2{
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 400px;
+}
+/* 두번째 이미지박스 */
+.box2 > .img2{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+/* 세번째컨텐츠박스 */
+.box3{
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 400px;
+}
+/* 세번째 이미지박스 */
+.box3 > .img3{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img3.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+/* 네번째컨텐츠박스 */
+.box4{
+    position: absolute;
+    top: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 400px;
+}
+/* 네번째 이미지박스 */
+.box4 > .img4{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img4.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+/********************* 하단 영역 **************************/
+/*하단영역*/
+#bottom {
+    position: relative;
+    width: 100%;
+    height: 182px;
+    background: #37393d;
+}
+
+/*정보박스*/
+.info {
+    position: absolute;
+    top: 45px;
+    line-height: 1.5rem;
+    margin-left: 30px;
+    color: #999999;
+    letter-spacing: -1px;
+    font-size: 1.2rem;
+    /*outline: 2px solid red;*/
+}
+
+.link>a {
+    text-decoration: none;
+    color: #b9b9b9;
+}
+
+/*첫번째글자 녹색*/
+.link>a:first-child {
+    color: #57b74e;
+}
+
+/*글자 사이 작대기*/
+.link>a:first-child::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #4a4c50;
+    margin: 0 1px 0 10px;
+}
+
+.address p {
+    float: left;
+    margin-top: 30px;
+}
+
+/*글자 사이 작대기*/
+.address p::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #4a4c50;
+    margin: 0 10px 0 10px;
+}
+
+/*마지막 작대기 없애기*/
+.address p:last-child::after {
+    content: "";
+    background: none;
+}
+
+/*설명텍스트*/
+.expl {
+    position: absolute;
+    top: 60px;
+}
+
+/*패밀리사이트 박스*/
+#family {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    width: 180px;
+    height: 40px;
+    border: 2px solid #58595b;
+    /* overflow: hidden; */
+}
+
+/*공통영역*/
+.common {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.title {
+    height: 35px;
+    margin-left: 30px;
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+    margin-bottom: -1px;
+}
+
+/*패밀리사이트 화살표*/
+.title>span {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+}
+
+.sub{
+    display: none;
+}
+
+.sub li {
+    height: 30px;
+    line-height: 30px;
+    background-color: #58595b;
+    border-top: 1px solid #4f4f4f;
+
+}
+
+.sub li a {
+    text-decoration: none;
+    margin-left: 30px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #b9b9b9;
+    font-size: 14px;
+
+}
+
+
+
+/********************* 미디어 쿼리 *********************/
+
+/*1200px이하*/
+@media only screen and (max-width: 1280px) {
+
+    .t2 {
+        display: none;
+    }
+
+    .t1::after {
+        display: none;
+    }
+
+}
+
+/*미디어쿼리*/
+
+/*1000px이하*/
+@media only screen and (max-width: 1000px) {
+
+    .t1 {
+        font-size: 1.4rem;
+    }
+
+    /*주소박스 글씨조절*/
+    .info {
+        font-size: 14px;
+    }
+
+}
+
+/*미디어쿼리*/
+
+
+/*850px이하*/
+@media only screen and (max-width: 850px) {
+
+
+    /*배너 밑으로 흐르게*/
+    #ban>ul {
+        flex-direction: column;
+    }
+
+    #ban>ul>li:first-child {
+        background-position: center -500px;
+
+    }
+
+    .mainC {
+        top: 50px;
+        left: 0;
+    }
+
+    /*배너 안에 텍스트이미지 크기조절*/
+    .mainC li a img {
+        width: 130px;
+    }
+
+    /*첫번째 텍스트이미지 크기조절*/
+    .con1>.txt>a>img {
+        width: 250px;
+    }
+
+    .mainC>.txt>.t1 {
+        margin-top: 55px;
+    }
+
+}
+
+/*미디어쿼리*/
+
+
+
+/*800px이하*/
+@media only screen and (max-width: 800px) {
+
+    /*상단로고 왼쪽으로 이동*/
+    .logo {
+        text-align: left;
+    }
+
+    /*각 배너 텍스트*/
+    .txt {
+        font: 14px/18px Verdana;
+    }
+
+    .info {
+        font-size: .6rem;
+        line-height: .6rem;
+        word-break: break-all;
+    }
+
+}
+
+/*미디어쿼리*/
+
+
+
+/*770px이하*/
+@media only screen and (max-width: 770px) {
+
+
+    .info {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        margin: 0 auto;
+        /*outline: 2px solid lime;*/
+    }
+
+    .link {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .address {
+        margin-top: 20px;
+        white-space: nowrap;
+        /*outline: 1px solid red;*/
+    }
+
+    .address p {
+        float: none;
+        margin: -2px 0 10px;
+        text-align: center;
+    }
+
+    /*사이 작대기 제거*/
+    .address p::after {
+        display: none;
+    }
+
+    .expl {
+        width: 200px;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        /*outline: 1px solid lime;*/
+    }
+
+    /*패밀리박스 제거*/
+    .family {
+        display: none;
+    }
+
+}
+
+/*미디어쿼리*/
+
+/*350px이하*/
+@media only screen and (max-width:350px) {
+
+
+    .address {
+        /*white-space: nowrap;*/
+    }
+
+}
+
+/*미디어쿼리*/
