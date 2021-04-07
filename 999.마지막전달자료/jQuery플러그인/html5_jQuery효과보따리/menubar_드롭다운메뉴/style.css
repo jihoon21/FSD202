@@ -1,0 +1,84 @@
+body {
+margin: 0;
+padding: 0;
+font: 10px normal Arial, Helvetica, sans-serif;
+background: #DDD url("body_bg.gif") repeat-x;
+}
+.container {
+width: 960px;
+margin: 0 auto;
+position: relative;
+}
+#header {
+background: url("dropdownmenu_bg.gif") no-repeat center top;
+padding-top: 120px;
+}
+#header .disclaimer {
+color: #999;
+padding: 100px 0 7px 0;
+text-align: right;
+display: block;
+position: absolute;
+top: 0;
+right: 0;
+}
+ul.topnav {
+	list-style: none;
+	padding: 0 20px;
+	margin: 0;
+	float: left;
+	width: 920px;
+	background: #222;
+	font-size: 1.2em;
+	background: url("topnav_bg.gif") repeat-x;
+}
+ul.topnav li {
+	float: left;
+	margin: 0;
+	padding: 0 15px 0 0;
+	position: relative; 
+}
+ul.topnav li a{
+	padding: 10px 5px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	float: left;
+}
+ul.topnav li a:hover{
+	background: url("topnav_hover.gif") no-repeat center top;
+}
+ul.topnav li span { /*--Drop down 시동*/
+	width: 17px;
+	height: 35px;
+	float: left;
+	background: url("subnav_btn.gif") no-repeat center top;
+}
+ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;} /*--Hover effect */
+ul.topnav li ul.subnav {
+	list-style: none;
+	position: absolute; /*메인메뉴의 영향을 받지 않게 함*/
+	left: 0; top: 35px;
+	background: #333;
+	margin: 0; padding: 0;
+	display: none;
+	float: left;
+	width: 170px;
+	border: 1px solid #111;
+}
+ul.topnav li ul.subnav li{
+	margin: 0; padding: 0;
+	border-top: 1px solid #252525; /* 베벨효과 */
+	border-bottom: 1px solid #444; /* 베벨효과 */
+	clear: both;
+	width: 170px;
+}
+html ul.topnav li ul.subnav li a {
+	float: left;
+	width: 145px;
+	background: #333 url("dropdown_linkbg.gif") no-repeat 10px center;
+	padding-left: 20px;
+}
+html ul.topnav li ul.subnav li a:hover { 
+	background: #222 url("dropdown_linkbg.gif") no-repeat 10px center;
+}

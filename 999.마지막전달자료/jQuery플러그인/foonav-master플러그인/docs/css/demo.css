@@ -1,0 +1,193 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #d9d9d9;
+	color: #222;
+	font: 400 14px/22px "merriweather";
+}
+#links {
+	width: 100%;
+	height: 40px;
+	background-color: #2C3E50;
+	color: #ffffff;
+}
+#links > a {
+	color: #AFAFAF;
+	text-decoration: none;
+	display: inline-block;
+	margin: 10px 10px;
+	transition: color 0.3s ease-in;
+}
+#links > a:hover {
+	color: #ffffff;
+}
+#header {
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+#header > h1 {
+	font: bold 48px/1 "oswald";
+	margin: 40px 0 20px 0;
+}
+#header > h2 {
+	font: normal 14px/16px "pt mono";
+}
+.demo,
+#content {
+	width: 80%;
+	margin: 0 auto;
+}
+.demo-content {
+	width: 100%;
+}
+.demo-content.hidden {
+	display: none;
+}
+.demo > h1,
+.demo-content > h1,
+#content > h1,
+#content > .demo-btn {
+	font: 700 30px/34px "pt sans narrow";
+}
+.demo > h2,
+.demo-content > h2,
+#content > h2 {
+	font: 700 30px/34px "pt sans narrow";
+}
+.demo > h3,
+.demo-content > h3,
+#content > h3 {
+	font: 700 22px/26px "pt sans";
+}
+.demo > h4,
+.demo-content > h4,
+#content > h4 {
+	font: 700 18px/22px "pt sans";
+}
+.demo > ul,
+.demo-content > ul,
+#content > ul {
+	list-style-type: disc;
+}
+.demo > h1 > a,
+#content > .demo-btn {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #65998F;
+	color: #ffffff;
+	border-radius: 6px;
+	font-size: 18px;
+	line-height: 22px;
+	margin-left: 20px;
+	vertical-align: bottom;
+	text-decoration: none;
+	transition: background-color 0.2s ease-in;
+}
+.demo > h1 > a:hover,
+#content > .demo-btn:hover {
+	background-color: #16A085;
+	text-decoration: none;
+}
+.demo a,
+.demo-content a,
+#content a {
+	text-decoration: none;
+	color: #525986;
+}
+.demo a:hover,
+.demo-content a:hover,
+#content a:hover {
+	text-decoration: underline;
+}
+.demo pre,
+.demo-content pre,
+#content pre {
+	background-color: #ffffff;
+	padding: 0;
+	border-radius: 6px;
+}
+.demo pre > code,
+.demo-content pre > code,
+#content pre > code {
+	padding: 10px;
+}
+.demo pre > code > .token.tab:not(:empty):before,
+.demo pre > code > .token.cr:before,
+.demo pre > code > .token.lf:before,
+.demo-content pre > code > .token.tab:not(:empty):before,
+.demo-content pre > code > .token.cr:before,
+.demo-content pre > code > .token.lf:before,
+#content pre > code > .token.tab:not(:empty):before,
+#content pre > code > .token.cr:before,
+#content pre > code > .token.lf:before {
+	color: #ffffff;
+}
+#footer {
+	width: 100%;
+	height: 300px;
+	color: #ffffff;
+	background-color: #2C3E50;
+	margin-top: 100px;
+}
+
+/* Table */
+#playground_options {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #ffffff;
+	margin-bottom: 40px;
+}
+#playground_options > tbody > tr:nth-child(even) {
+	background-color: #F3F3F3;
+}
+#playground_options,
+#playground_options > thead > tr > th,
+#playground_options > tbody > tr > td {
+	border: solid 1px #2C3E50;
+}
+#playground_options > thead > tr > th,
+#playground_options > tbody > tr > td {
+	padding: 10px;
+}
+#playground_options > thead > tr > th {
+	color: #ffffff;
+	background-color: #2C3E50;
+	font: 700 22px/26px "pt sans";
+	text-align: left;
+}
+#playground_options > tbody > tr > td {
+	line-height: 22px;
+}
+#playground_options > tbody > tr > td.child {
+	text-indent: 20px;
+	font: 400 12px/22px "merriweather";
+}
+#playground_options > tbody > tr > td select,
+#playground_options > tbody > tr > td input[type="checkbox"],
+#playground_options > tbody > tr > td input[type="radio"] {
+	font: 400 14px/22px "merriweather";
+	vertical-align: top;
+	margin-right: 5px;
+}
+#playground_options > tbody > tr > td input[type="text"],
+#playground_options > tbody > tr > td input[type="range"] {
+	font: 400 14px/18px "merriweather";
+	vertical-align: middle;
+	margin-right: 15px;
+}
+#playground_options > tbody > tr > td select {
+	height: 20px;
+	border: solid 1px #B6B6B6;
+}
+#playground_options > tbody > tr > td input[type="text"],
+#playground_options > tbody > tr > td input[type="range"] {
+	height: 18px;
+	padding: 1px;
+	border: solid 1px #B6B6B6;
+}
+#playground_options > tbody > tr > td label {
+	margin-right: 15px;
+}

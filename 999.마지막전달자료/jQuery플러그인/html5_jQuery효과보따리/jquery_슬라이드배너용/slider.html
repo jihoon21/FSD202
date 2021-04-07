@@ -1,0 +1,91 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+.clsBannerScreen {overflow: hidden;position: relative;height: 150px;width: 600px; border:1px solid #e1e1e1; cursor:pointer; clear:both;}
+.clsBannerScreen .images {position:absolute; display:none; }
+ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
+.clsBannerButton {width:600px;cursor:pointer;border-bottom:1px solid #e1e1e1;}
+.clsBannerButton li {width:100px;float:left;border-right:1px solid #e1e1e1;padding:2px;}
+.clsBannerButton li.fir {border-left:1px solid #e1e1e1;}
+
+.clsBannerButton li.labelOverClass {font-weight:bold;}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/jquery.banner.js"></script>
+<script type="text/javascript">
+<!--
+$(function() {
+	$("#image_list_1").jQBanner({	//롤링을 할 영역의 ID 값
+		nWidth:600,					//영역의 width
+		nHeight:150,				//영역의 height
+		nCount:5,					//돌아갈 이미지 개수
+		isActType:"up",				//움직일 방향 (left, right, up, down)
+		nOrderNo:1,					//초기 이미지
+		nDelay:2000					//롤링 시간 타임 (1000 = 1초)
+		/*isBtnType:"li"*/			//라벨(버튼 타입) - 여기는 안쓰임
+		}
+	);
+	
+	
+	$("#image_list_2").jQBanner({nWidth:600,nHeight:150,nCount:5,isActType:"left",nOrderNo:1,isStartAct:"N",isStartDelay:"Y",nDelay:2000,isBtnType:"li"});
+	$("#image_list_3").jQBanner({nWidth:600,nHeight:150,nCount:5,isActType:"left",nOrderNo:1,isStartAct:"N",isStartDelay:"Y",nDelay:3000,isBtnType:"img"});
+});
+//-->
+</script>
+
+</head>
+<body>
+<div id="image_list_1">
+<div class="clsBannerScreen">
+	<div class="images" style="display:block"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/google.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/daum.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/naver.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/nate.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/yahoo.jpg" /></div>
+</div>
+</div>
+<p>&nbsp;</p>
+
+<div id="image_list_2">
+<div class="clsBannerScreen">
+	<div class="images" style="display:block"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/google.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/daum.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/naver.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/nate.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/yahoo.jpg" /></div>
+</div>
+
+<ul class="clsBannerButton" id="label_2">
+	<li class="fir" overclass="labelOverClass" outclass="fir">구글<br />(google.co.kr)</li>
+	<li overclass="labelOverClass" outclass="">다음<br />(daum.net)</li>
+	<li overclass="labelOverClass" outclass="">네이버<br />(naver.com)</li>
+	<li overclass="labelOverClass" outclass="">네이트<br />(nate.com)</li>
+	<li overclass="labelOverClass" outclass="">야후<br />(kr.yahoo.com)</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div id="image_list_3">
+<ul class="clsBannerButton" id="label_3">
+	<li><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/1_on.jpg" oversrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/1_on.jpg" outsrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/1.jpg" /></li>
+	<li><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/2.jpg" oversrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/2_on.jpg" outsrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/2.jpg" /></li>
+	<li><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/3.jpg" oversrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/3_on.jpg" outsrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/3.jpg" /></li>
+	<li><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/4.jpg" oversrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/4_on.jpg" outsrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/4.jpg" /></li>
+	<li><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/5.jpg" oversrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/5_on.jpg" outsrc="http://cfs.tistory.com/custom/blog/68/684698/skin/images/5.jpg" /></li>
+</ul>
+
+<div class="clsBannerScreen">
+	<div class="images" style="display:block"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/google.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/daum.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/naver.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/nate.jpg" /></div>
+	<div class="images"><img src="http://cfs.tistory.com/custom/blog/68/684698/skin/images/yahoo.jpg" /></div>
+</div>
+</div>
+</body>
+</html>

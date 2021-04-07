@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* CSS Document */
+html, body{
+	padding:0;
+	margin:0;
+	background-color:#000;
+}
+/*전체부모*/
+#wrap{
+	position:relative;/*부모자격*/
+	width:1000px;
+	height:1000px;
+	margin:0 auto;/*가운데*/
+	background:url(../images/unpretty_bg.png) no-repeat;
+}
+
+#wrap>article{/*큰별*/
+	position:absolute;	
+}
+#wrap>header{/*로고*/
+	position:absolute;
+	width:365px;
+	height:283px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	/*현재위치에서 자기자신 크기의 반만큼 반대방향으로 이동--> 중앙정렬*/
+	/*transition:all 0.5s ease-in;*/
+}
+#wrap>header img{/*박스사이즈에 이미지크기 맞추기*/
+	width:100%;
+	height:100%;
+}
+
+/*랩퍼존 디자인-공통디자인*/
+#wrap>nav{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+}
+#wrap>nav>div{/*랩퍼공통디자인*/
+	position:absolute;
+	width:120px;
+	height:120px;
+	cursor:pointer;/*손가락모양*/
+}
+#wrap>nav>div>aside{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;/*애니메이션 할때 반드시 초기값 필요!!!*/
+	left:0;
+	border:4px solid #ccc;
+	border-radius:62px;/*원형*/	
+	transition:all 0.4s;/*애니메이션*/
+}
+
+/**************첫번째 자식 - 애쉬비*********************/
+#wrap>nav>div:first-child{
+	top:45px;
+	left:436px;
+}
+#wrap>nav>div:first-child>aside{
+	background:#000 url(../images/ash-b.png) no-repeat;
+	background-position:-50px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:first-child:hover aside:last-child{
+	top:230px;
+	left:-33px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:first-child:hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+/**************************애쉬비끝****************************/
+/*******************두번째 자식-엑시**************************/
+#wrap>nav>div:nth-child(2){
+	top:107px;
+	right:198px;
+}
+#wrap>nav>div:nth-child(2)>aside{
+	background:#000 url(../images/exy.png) no-repeat;
+	background-position:-35px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(2):hover aside:last-child{
+	top:175px;
+	left:-285px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(2):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+
+/**************************엑시끝*****************************/
+
+/*******************세번째 자식-헤이즈**************************/
+#wrap>nav>div:nth-child(3){
+	top:304px;
+	right:57px;
+}
+#wrap>nav>div:nth-child(3)>aside{
+	background:#000 url(../images/heize.png) no-repeat;
+	background-position:-35px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(3):hover aside:last-child{
+	top:-16px;
+	left:-420px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(3):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+/**************************헤이즈끝****************************/
+
+
+/*******************네번째 자식-효린**************************/
+#wrap>nav>div:nth-child(4){
+	bottom:326px;
+	right:58px;
+}
+#wrap>nav>div:nth-child(4)>aside{
+	background:#000 url(../images/hyolyn.png) no-repeat;
+	background-position:-45px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(4):hover aside:last-child{
+	top:-267px;
+	left:-419px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(4):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+
+/**************************효린끝*****************************/
+
+/*******************다섯번째 자식-전지윤**************************/
+#wrap>nav>div:nth-child(5){
+	bottom:78px;
+	right:176px;
+}
+#wrap>nav>div:nth-child(5)>aside{
+	background:#000 url(../images/jenyer.png) no-repeat;
+	background-position:-49px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(5):hover aside:last-child{
+	top:-533px;
+	left:-301px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(5):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+
+/**************************전지윤끝****************************/
+
+
+/*******************여섯번째 자식-캐스퍼**************************/
+#wrap>nav>div:nth-child(6){
+	bottom:41px;
+	right:445px;
+}
+#wrap>nav>div:nth-child(6)>aside{
+	background:#000 url(../images/kasper.png) no-repeat;
+	background-position:-45px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(6):hover aside:last-child{
+	top:-560px;
+	left:-34px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(6):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+
+/**************************캐스퍼끝*****************************/
+
+
+
+/*******************일곱번째 자식-키디비**************************/
+#wrap>nav>div:nth-child(7){
+	bottom:75px;
+	left:183px;
+}
+#wrap>nav>div:nth-child(7)>aside{
+	background:#000 url(../images/kittib.png) no-repeat;
+	background-position:-30px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(7):hover aside:last-child{
+	top:-533px;
+	left:223px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(7):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+
+/**************************키디비끝****************************/
+
+
+/*******************여덞번째 자식-수아**************************/
+#wrap>nav>div:nth-child(8){
+	bottom:326px;
+	left:47px;
+}
+#wrap>nav>div:nth-child(8)>aside{
+	background:#000 url(../images/sua.png) no-repeat;
+	background-position:-49px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(8):hover aside:last-child{
+	top:-277px;
+	left:361px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(8):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+/**************************수아끝*****************************/
+
+
+
+/*******************아홉번째 자식-트루디**************************/
+
+#wrap>nav>div:nth-child(9){
+	top:303px;
+	left:44px;
+}
+#wrap>nav>div:nth-child(9)>aside{
+	background:#000 url(../images/truedy.png) no-repeat;
+	background-position:-40px -50px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(9):hover aside:last-child{
+	top:-30px;
+	left:364px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(9):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+
+/**************************트루디끝****************************/
+
+
+/*******************열번째 자식-유빈**************************/
+
+#wrap>nav>div:nth-child(10){
+	top:101px;
+	left:183px;
+}
+#wrap>nav>div:nth-child(10)>aside{
+	background:#000 url(../images/yubin.png) no-repeat;
+	background-position:-52px 0px;/*가로방향, 세로방향순*/
+}
+/*마우스 오버시 두번째 자식(랩퍼) 디자인변경*/
+#wrap>nav>div:nth-child(10):hover aside:last-child{
+	top:177px;
+	left:224px;
+	width:200px;
+	height:433px;
+	border-radius:10px;
+	background-position:0px;
+}
+/*마우스 오버시 첫번째 자식(TV) 디자인변경*/
+#wrap>nav>div:nth-child(10):hover aside:first-child{
+	background-image:url(../images/tv3_small.png);
+	background-position:0px;
+}
+
+
+
+/**************************유빈끝*****************************/
+
+/*TV 디자인*/
+#tv{
+	position:absolute;
+	width:500px;
+	height:700px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);/*중앙설정*/
+	background:url(../images/tv3.png) no-repeat 0/100% 100%;
+	display:none;/*처음에 안보이게*/
+}
+
+/*동영상 위치설정*/
+#tv iframe{
+	position:absolute;
+	top:300px;
+	left:75px;
+}
+/*닫기버튼 디자인*/
+#close{
+	position:absolute;
+	width:100px;
+	height:100px;
+	top:240px;
+	right:35px;
+	font:bold 42px/100px Verdana, Geneva, sans-serif;
+	color:#fff;
+	text-align:center;
+	text-shadow:2px 2px 0px #666;/*x축, y축, blur, 색*/
+	cursor:pointer;/*손가락*/
+}
+
+
+
+
+
+
+
+
+
+
+
+

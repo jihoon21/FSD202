@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="description" content="A simple menu to help users navigate either your site or a single pages content">
+	<title>FooNav.js - Simple Navigation Plugin</title>
+	<link rel="stylesheet" href="docs/css/prism.css">
+	<link href="http://fonts.googleapis.com/css?family=Merriweather:400,900|PT+Sans:700|PT+Sans+Narrow:700|Oswald:700|PT+Mono" rel="stylesheet" type="text/css">
+	<link href="docs/css/index.css" rel="stylesheet" type="text/css" />
+	<link href="dist/foonav.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="links">
+		<a href="http://fooplugins.com" target="_blank">FooPlugins</a>
+		<a href="https://github.com/fooplugins/foonav">GitHub Repo</a>
+		<a href="docs/playground.html">Playground</a>
+	</div>
+	<div id="header">
+		<img src="docs/content/foonav_logo.png" />
+		<h1>DESIGN BOOK</h1>
+		<h2>Jquery 를 이용한 반응형 웹</h2>
+		<h3>by korea creative</h3>
+	</div>
+	<div id="share-buttons">
+ 		<!-- Facebook -->
+		<a href="http://www.facebook.com/sharer.php?u=http://fooplugins.com/foonav-js-demos/" target="_blank"><img src="docs/content/facebook.png" alt="Facebook" /></a>
+ 
+		<!-- Twitter -->
+		<a href="http://twitter.com/share?url=http://fooplugins.com/foonav-js-demos/&text=FooNav.js - A Simple Navigation Plugin for jQuery&hashtags=jquery" target="_blank"><img src="docs/content/twitter.png" alt="Twitter" /></a>
+ 
+		<!-- Google+ -->
+		<a href="https://plus.google.com/share?url=http://fooplugins.com/foonav-js-demos/" target="_blank"><img src="docs/content/google.png" alt="Google" /></a>
+	</div>	
+	<div id="content">
+		<hr/>
+		<p>인터랙티브한 상품을 디자인할때 누가 사용할 것인가, 어떻게 사용할 것인가 그리고 어디에서 사용될 것인가와 같은 것들을 고려해야 한다. 사람들이 상품을 사용할 때 보이는 행동의 유형을 이해하는 것이다. 인터페이스 종류의 적절성과 입출력 장치의 배열은 사용자의 어떤 행동을 지원하기 위한 것인가에 따라 달라진다.</p>
+		<hr/>
+		<h1>무엇을 디자인할 것인가.</h1>
+		<h2>Playground</h2>
+		<ul>
+			<li><a href="docs/playground.html">미래 발전할 수 있는 디자인 전략</a></li>
+		</ul>
+		<h2>Item Creation</h2>
+		<ul>
+			<li><a href="docs/item-creation/auto-generation.html">메뉴 아이템 설치 메뉴</a></li>
+			<li><a href="docs/item-creation/custom.html">보편적인 메뉴 디자인 </a></li>
+		</ul>
+		<h2>Positioning</h2>
+		<p>멀티 터치 디스플레이, 음성 기반 시스템, 휴대용 기기, 큰 규모의 인터랙티브 디스플레이 등이 있다.<br>
+		사용자가 시스템을 사용할 방식을 디자인하는데에도 수많은 방법이 있다.</p>
+		<ul>
+		  <li>Top Left</li>
+			<li>Top Right</li>
+			<li>Left Center</li>
+			<li>Right Center</li>
+			<li>Bottom Left</li>
+			<li>Bottom Right</li>
+		</ul>
+		<h2>Themes</h2>
+		<p>카메라 전자레인지 세탁기 등 물리적인 작동을 하는 상품 디자인의 영역에 있던 일상 소비 용품의 인터<br>
+	    페이스도 이제는 대부분 디지털 기반으로 바뀌었으며 <a href="docs/playground.html">this demo page</a> 상품 화물 책 등을 계산하고 붙<br>
+		이고 빌리는 표준으로 자리잡아 가고 있다.</p>
+		<h3>Default</h3>
+		<ul>
+			<li>Blue</li>
+			<li>Dark</li>
+			<li>Green</li>
+			<li>Light</li>
+		</ul>
+		<h3>Flat UI</h3>
+		<ul>
+			<li>Amethyst</li>
+			<li>Asbestos</li>
+			<li>Asphalt</li>
+			<li>Blue</li>
+			<li>Emerald</li>
+			<li>Orange</li>
+			<li>Pumpkin</li>
+			<li>Red</li>
+			<li>Silver</li>
+			<li>Turquoise</li>
+		</ul>
+		<hr/>
+		<h1>Other Features</h1>
+		<p>다른 사람들은 사용자에 대한 이해를 바탕으로 어떤 선택을 할지 결정하고자 원칙을 더욱 고수할 수도<br>
+	    있다. 인터랙션 디자인 방법과 관련된 다양한 측면들을 다루고자 한다.</p>
+		<ul>
+		  <li>Insert Custom Content Before or After the Menu</li>
+			<li>Show After X Pixels Scrolled</li>
+			<li>Change the Show/Hide Speed</li>
+			<li>Enable/Disable Auto Tracking of Anchors in the Menu</li>
+			<li>Enable/Disable the Smooth Scroll to Anchors</li>
+			<li>Enable/Disable Auto Parsing of the current URL for Hash Values (Anchors)</li>
+			<li>Enable/Disable Auto Showing of the Menu on Page Load</li>
+			<li>Switch Between a Simple Slide or Fade Animation in the Menu</li>
+			<li>Simple API for Developers to Use</li>
+			<li>Add Custom Buttons</li>
+		</ul>
+		<hr/>
+		<h2>Getting Started Simple (foonav.min.css사용법 설명)</h2>
+		<h2>Step 1: Include the required files</h2>
+		<p>Include the foonav.min.css file.</p>
+		<pre><code class="language-markup">&lt;link href="http://example.com/css/foonav.min.css" rel="stylesheet" /&gt;</code></pre>
+		<p>After jQuery, add the foonav.min.js file.</p>
+		<pre><code class="language-markup">&lt;script src="http://example.com/js/foonav.min.js"&gt;&lt;/script&gt;</code></pre>
+		<h2>Step 2: Initialize and Configure</h2>
+		<p>In either a JavaScript file or inline, initalize FooNav. This has to be below the foonav.js file. Some of the following settings below are defaults, and are only added for demonstration purposes.</p>
+		<pre><code class="language-javascript">FooNav.init({
+	classes: 'fon-full-height fon-border fon-rounded fon-shadow', // Any additional classes to add to FooNav
+	items: '#content', // The selector where FooNav looks for the header elements
+	position: 'fon-top-right', // The position in the viewport
+	theme: 'fon-light' // The theme to use
+});</code></pre>
+		<hr/>
+		<h1>Getting Started Dev</h1>
+		<h2>Step 1: Include the required files</h2>
+		<p>Include the foonav.min.css file.</p>
+		<pre><code class="language-markup">&lt;link href="http://example.com/css/foonav.min.css" rel="stylesheet" /&gt;</code></pre>
+		<p>After jQuery, add the foonav.min.js file.</p>
+		<pre><code class="language-markup">&lt;script src="http://example.com/js/foonav.min.js"&gt;&lt;/script&gt;</code></pre>
+		<h2>Step 2: Initialize and Configure</h2>
+		<p>In either a JavaScript file or inline, initalize FooNav. This has to be below the foonav.js file. Some of the following settings below are defaults, and are only added for demonstration purposes.</p>
+		<pre><code class="language-javascript">FooNav.init({
+	classes: 'fon-full-height fon-border fon-rounded fon-shadow', // Any additional classes to add to FooNav
+	items: '#content', // The selector where FooNav looks for the header elements
+	position: 'fon-top-right', // The position in the viewport
+	theme: 'fon-light' // The theme to use
+});</code></pre>
+		<h2>Step 3: Use the FooNav Instance</h2>
+		<p>FooNav has it's own ready event to use to avoid asynchronous loading issues. You can see it below allowing you to use the FooNav API to control the plugin, binding it to whatever events you want.</p>
+		<pre><code class="language-javascript">FooNav.init({...configuration...}).ready(function(fnav){
+	fnav.toggle(); // Toggles FooNav between open and closed states
+	fnav.destroy(); // Completely destroys FooNav removing it from the DOM
+	fnav.reinit({
+		classes: 'fon-shadow',
+		items: '#content',
+		position: 'fon-top-left',
+		theme: 'fon-dark'
+	}); // Reinitializes FooNav with the new options
+});</code></pre>
+	</div>
+	<div id="footer">
+		<script src="docs/js/jquery.min.js"></script>
+		<script src="docs/js/prism.js"></script>
+		<script src="dist/foonav.min.js"></script>
+		<script>
+			jQuery(function(){
+				FooNav.init({
+					classes: 'fon-shadow',
+					items: '#content',
+					position: 'fon-top-right',
+					theme: 'fon-dark'
+				}).ready(function(nav){
+					nav.buttons.append('<span class="demo-arrow"></span>');
+				});
+			});
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-274447-68', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</div>
+</body>
+</html>

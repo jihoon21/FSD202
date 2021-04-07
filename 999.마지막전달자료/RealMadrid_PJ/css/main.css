@@ -1,0 +1,392 @@
+@charset "utf-8";
+/* CSS Document */
+html, body{
+	padding:0px;
+	margin:0px;
+	width:100%;/*자식요소의 %크기값을 먹히게함*/
+	height:100%;/*자식요소의 %크기값을 먹히게함*/
+}
+body{
+	background-color:#000;
+	overflow:hidden;/*화면 바깥으로 넘치는 요소 숨기기*/
+}
+#wrap{
+	position:relative;
+	width:100%;
+	max-width:1400px;
+	min-width:800px;
+	height:100%;
+	max-height:1200px;
+	min-height:600px;
+	margin:0 auto;
+	overflow:hidden;
+}
+#bg{
+	position:absolute;/*배경이미지가 되기위한 position*/
+	width:100%;
+	height:100%;
+	background:url(../images/real-madrid.jpg) 0px/100% 100% no-repeat;
+	opacity:0.3;
+}
+
+header#hgroup{
+	position:absolute;
+	top:5%;
+	left:5%;
+	width:90%;
+	min-width:820px;/*최소사이즈지정*/
+	max-width:1600px;/*최대사이즈지정*/
+	height:100px;
+	/*border:1px solid red;*/
+}
+#logo{/*hgroup기준*/
+	position:absolute;
+	width: 80px;
+	height:100%;
+	background:url(../images/logo.png) top/100% no-repeat;
+}
+#menu{/*상단메뉴*/
+	position:absolute;
+	top:33%;
+	left:20px;/*고정값*/
+	width:90%;
+	height:40px;
+	border:3px solid #d8cd00;
+	border-radius:10px;
+	box-sizing:border-box;
+}
+#menubg{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	opacity:0.8;
+	border-radius:10px;
+	box-sizing:border-box;
+}
+#menu ul{
+	position:absolute;
+	width:100%;
+	height:100%;
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+#menu ul:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#menu ul li{
+	float:left;
+	width:12%;
+	height:100%;
+}
+#menu ul li a{
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	font:bold 80%/40px Arial, Helvetica, sans-serif;
+	color:#333;
+	text-decoration:none;
+	box-sizing:border-box;
+}
+#menu ul li:first-child{/*로고타이틀*/
+	width:25%;
+	background:url(../images/logotitle.png) 55px  no-repeat;
+}
+#menu ul li:nth-child(4){
+	width:22%;
+}
+
+/*pmenu설정(선수선택메뉴)*/
+#pmenu{
+	position:absolute;
+	top:80%;
+	left:7%;
+	box-sizing:border-box;
+	width:82%;	
+	min-width:740px;/*최소사이즈지정*/
+	max-width:1600px;/*최대사이즈지정*/
+	height:60px;/*고정*/
+	border:3px solid #d8cd00;
+	border-radius:10px;
+}
+#pbg{/*선수메뉴배경*/
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.8;
+	box-sizing:border-box;
+	border-radius:10px;
+}
+#indic{/*선수선택표시자*/
+	position:absolute;
+	top:-6%;
+	left:-0.4%;
+	width:20%;
+	height:60px;
+	box-sizing:border-box;
+	border:3px solid lime;
+	border-radius:10px;
+	cursor:pointer;
+	
+}
+#pmenu ul{
+	position:absolute;
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	width:100%;
+	height:100%;
+}
+#pmenu ul:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#pmenu ul li{
+	float:left;
+	width:20%;
+	height:100%;
+}
+#pmenu ul li a{
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	/*font-size => 12pt=16px=1em=100%*/
+	font:bold 80%/60px Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	
+}
+
+#pmenu ul li:first-child{/*첫번째선수배경이미지*/
+	background:url(../images/2.VARANE.png) -40px 0px/80% no-repeat;
+}
+
+/*Player배치*/
+.pos{	/*포지션 공통 디자인*/
+	position:absolute;
+	box-sizing:border-box;
+	border:3px solid lime;
+	border-radius:10px;
+	overflow:hidden;
+}
+.pos0{/*포지션 0번 디자인-화면 바깥으로 나감!*/
+	width:80%;
+	height:65%;
+	top:100%;
+	left:100%;
+}
+.pos1{/*포지션 1번 디자인*/
+	width:50%;
+	height:45%;
+	top:30%;
+	left:40%;
+}
+.pos2{/*포지션 2번 디자인*/
+	width:20%;
+	height:17%;
+	top:25%;
+	left:10%;
+}
+.pos3{/*포지션 3번 디자인*/
+	width:10%;
+	height:7%;
+	top:5%;
+	left:5%;
+	opacity:0;/*투명도0*/
+}
+
+/*선수box 공통디자인*/
+.sbg{/*배경*/
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.5;
+	border-radius:10px;
+}
+.stxt{/*글자*/
+	position:absolute;
+	width:100%;
+	height:100%;
+	font:bold 80% Arial, Helvetica, sans-serif;
+	box-sizing:border-box;
+	padding:5%;
+	padding-right:40%;
+	color:lime;
+}
+/*
+자식요소로 여러가지 태그가 사용될때
+first-of-type
+last-of-type
+nth-of-type(n)
+자식요소가 한가지 태그일때는
+first-child, last-child, nth-child(n)
+*/
+.stxt span:first-of-type{/*이름*/
+	font-size:20px;
+}
+.stxt span:nth-of-type(2){/*인용글*/
+	font-size:16px;
+}
+
+#player1>.stxt{
+	background:url(../images/2.VARANE.png) right/50% no-repeat;	
+}
+
+#player2>.stxt{
+	background:url(../images/3.PEPE.png) right/50% no-repeat;	
+}
+#player3>.stxt{
+	background:url(../images/8.KROOS.png) right/50% no-repeat;	
+}
+#player4>.stxt{
+	background:url(../images/17.ARBELOA.png) right/50% no-repeat;	
+}
+#player5>.stxt{
+	background:url(../images/23.DANILO.png) right/50% no-repeat;	
+}
+#player2>.stxt>span:nth-of-type(2),#player2>.stxt>span:nth-of-type(3){
+	display:none;
+}
+#player3>.stxt>span, #player4>.stxt>span, #player5>.stxt>span{
+	display:none;
+}
+
+/*모바일용 메뉴버튼*/
+#mobmenu{
+	position:absolute;
+	right:7%;
+	top:5%;
+	width:100px;
+	height:100px;
+	box-sizing:border-box;	
+	text-align:center;
+	font:bold 44px/100px Verdana, Geneva, sans-serif;
+	color:#d8cd00;
+	border:1px solid #d8cd00;
+	border-radius:5px;
+	cursor:pointer;
+	display:none;
+}
+/*모바일용 닫기버튼*/
+#btnclose{
+	position:absolute;
+	right:0;
+	top:0;
+	width:50px;
+	height:50px;
+	box-sizing:border-box;	
+	text-align:center;
+	font:bold 44px/50px Verdana, Geneva, sans-serif;
+	color:#666;
+	cursor:pointer;
+	display:none;
+}
+
+/*모바일용 미디어쿼리*/
+@media only screen and (max-width:1000px){
+	
+	#logo{/*hgroup기준*/
+		top:30px;
+		left:10px;
+		width: 150px;
+		height:100%;
+	}
+	#mobmenu{/*3선메뉴버튼*/
+		display:block;
+	}
+	#btnclose{/*닫기버튼*/
+		display:block;
+	}
+	#wrap{
+		min-width:100%;
+	}
+	header#hgroup{
+		top:0;
+		left:0;
+		width:100%;
+		min-width:100%;/*최소사이즈지정*/
+		max-width:100%;/*최대사이즈지정*/
+		height:100%;
+		/*border:1px solid red;*/
+	}
+	#menu{
+		top:0;
+		left:0;
+		width:100%;
+		height:480px;
+		z-index:1;
+		display:none;/*메뉴가 처음에 안보이게*/
+	}
+	#menu ul li{
+		float:none;
+		width:100%;
+		height:80px;
+	}
+	#menu ul li:first-child{/*로고타이틀*/
+		width:100%;
+		background:url(../images/logotitle.png) center/30% no-repeat;
+	}
+	#menu ul li:nth-child(4){
+		width:100%;
+	}
+	#menu ul li a{
+		font-size:40px;
+		line-height:80px;
+	}
+	
+	#pmenu{/*선수메뉴*/
+		position:fixed;
+		top:88%;
+		left:0;
+		width:100%;	
+		min-width:100%;
+		max-width:100%;
+		height:80px;/*고정*/
+		border:3px solid #d8cd00;
+		border-radius:10px;
+	}
+	
+	#pmenu ul li a{
+		font-size:20px;
+		line-height:80px;
+	}
+	#indic{
+		height:80px;
+	}
+	
+	
+	.pos1{/*포지션 1번 디자인*/
+		width:100%;
+		height:65%;
+		top:20%;
+		left:0%;
+	}
+	
+	.pos2{/*포지션 2번 디자인*/
+		width:20%;
+		height:12%;
+		top:5%;
+		left:40%;
+	}
+	.stxt{
+		font-size:30px;
+	}
+	.stxt span:first-of-type{/*이름*/
+		font-size:34px;
+	}
+	.stxt span:nth-of-type(2){/*인용글*/
+		font-size:32px;
+	}
+}
+
+
+
+

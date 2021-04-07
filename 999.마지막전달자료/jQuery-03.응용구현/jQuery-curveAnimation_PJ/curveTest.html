@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>커브애니테스트</title>
+<script src="jquery-1.7.2.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="jquery.rotate.js"></script>
+<script type="text/javascript">
+	$(function(){//jQB////////////////////
+		$("#obj1").click(function(){
+			$(this)
+			.animate({/// 1. 올라가기
+				bottom:"+=600px", left:"+=300px",
+				rotate:"90deg"
+			},{/// 스페셜이징 ////
+				duration: 800,
+				specialEasing:{bottom:"easeOutQuad",left:"easeInQuad"}
+			})
+			.animate({/// 2. 내려오기
+				bottom:"-=570px", left:"+=400px",
+				rotate:"180deg"
+			},{/// 스페셜이징 ////
+				duration: 800,
+				specialEasing:{bottom:"easeInQuad",left:"easeOutQuad"},
+				complete:function(){//애니메이션 끝난 후
+					$("#crack").show();//크랙보이기
+				}///function
+			});/////////////////////////////////////////////
+		});/////// click ///////////////////////////////////////////
+		
+		
+		
+		
+	});///jQB////////////////////////////
+	
+	
+	
+</script>
+<style type="text/css">
+html, body{
+	padding:0px;
+	margin:0px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+#obj1{
+	position:absolute;
+	bottom:0px;
+	left:300px;
+	width:241px;
+	height:137px;
+}
+#crack{
+	position:absolute;
+	bottom:-80px;
+	left:950px;	
+	display:none;
+}
+
+#crack img{
+	width:300px;
+}
+</style>
+</head>
+
+<body>
+<div id="crack"><img src="img/cracked-floor.jpg" alt="crack"></div>
+<div id="obj1"><img src="img/index_23.png" width="241" height="137" alt="01"></div>
+</body>
+</html>

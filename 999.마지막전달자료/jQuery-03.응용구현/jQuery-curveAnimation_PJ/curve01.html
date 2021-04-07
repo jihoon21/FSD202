@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery.path를 이용한 곡선이동 연습</title>
+<script src="jquery-1.7.2.min.js"></script>
+<script src="jQuery.path.js"></script>
+<script type="text/javascript">
+	// 곡선 애니메이션 플러그인 jQuery.Path를 위한 셋팅
+	// 원형궤도를 도는 설정 파라미터
+	var arc_para = {
+		center : [285, 185], //중심점(x축,y축)
+		radius : 300, //반지름
+		start : 1000, //원형궤도의 출발점
+		end : 1, //원형궤도의 끝점
+		dir : -1 //방향(1: 반시계, -1 : 시계방향)
+	};
+	// 싸인곡선 파라미터 설정
+	var SineWave = function() {
+  this.css = function(p) {
+    var s = Math.sin(p*20)
+    var x = 500 - p * 300 
+    var y = s * 50 + 150
+    var o = ((s+2)/4+0.1)
+    return {top: y + "px", left: x + "px", opacity: o}
+  } 
+};
+	
+	
+	
+	$(function(){//jQB//////////////////////
+		$("#curve").click(function(){
+			$(this).animate({
+				path : new $.path.arc(arc_para)//arc메서드호출
+			},5000);
+		});////click//
+		
+		$("#curve2").click(function(){
+			$(this).animate({
+				path : new SineWave //생성자함수 호출
+			},2000);
+		});///click///
+		
+		
+		
+		
+		
+	});//jQB///////////////////////////////
+	
+	
+	
+	
+</script>
+<style type="text/css">
+body, html{
+	background-color:black;
+	padding:0;
+	margin:0;
+}
+#arc { position: relative; width: 100px; height: 100px; }
+#bezier { position: relative; width: 100px; height: 100px; }
+#sine { position: relative; width: 100px; height: 100px; }
+
+.pixel { 
+position: absolute; 
+width: 150px; 
+height: 150px; 
+background: red; 
+border-radius: 130px;
+-moz-border-radius: 130px; 
+-webkit-border-radius: 130px; 
+opacity: 0.9; 
+top: 200px; 
+left: 185px;
+}
+
+.pixel2 { 
+position: absolute; 
+width: 150px; 
+height: 150px; 
+background: blue; 
+border-radius: 130px;
+-moz-border-radius: 130px; 
+-webkit-border-radius: 130px; 
+opacity: 0.9; 
+top: 200px; 
+left: 285px;
+}
+</style>
+</head>
+
+<body>
+<div id="curve" class="pixel"></div>
+<div id="curve2" class="pixel2"></div>
+
+</body>
+</html>

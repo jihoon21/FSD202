@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>loading bar</title>
+<style>
+#loading{
+	width:500px;
+	height:80px;
+	border:1px solid #ccc;
+}
+#bar{
+	width:0%;
+	height:100%;
+	background-color:red;
+}
+
+</style>
+<script>
+window.onload=function(){
+	setTimeout("loading()",1000);
+
+}
+
+function loading(){
+	var tg = document.getElementById("bar");
+	tg.style.width = "70%";
+	tg.style.transition="width 2s";
+}
+</script>
+</head>
+
+<body>
+<aside id="loading">
+	<div id="bar"></div>
+</aside>
+
+</body>
+</html>

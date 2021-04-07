@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body{
+	padding:0px;
+	margin:0px;
+	width:100%;
+	height:100%;
+	background-color:#000;
+}
+
+#container{ /*배경*/
+	position:relative;
+	width:100%;
+	height:100%;
+	background:url(../images/main.png) no-repeat;
+	background-size:cover;
+}
+
+/****************메뉴********************/
+
+#stage{
+	position:fixed;
+	width:410px;
+	height:410px;
+	background:url(../images/center.png) 0px/100% 100% no-repeat;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+#Home{
+	position:absolute;
+	width:40px;
+	height:40px;
+	top:-20px;
+	left:185px;
+	background:url(../images/circle.png) 0px/100% 100% no-repeat;
+	text-align:center;
+	font:20px/130px Verdana, Geneva, sans-serif;
+	color:#fff;
+}
+#About{
+	position:absolute;
+	width:25px;
+	height:25px;
+	top:192px;
+	left:397px;
+	background:url(../images/s_circle.png) 0px/100% 100% no-repeat;
+	text-align:center;
+	font:14px/130px Verdana, Geneva, sans-serif;
+	color:#fff;
+}
+#Work{
+	position:absolute;
+	width:25px;
+	height:25px;
+	top:397px;
+	left:192px;
+	background:url(../images/s_circle.png) 0px/100% 100% no-repeat;
+	text-align:center;
+	font:14px/130px Verdana, Geneva, sans-serif;
+	color:#fff;
+}
+#Contact{
+	position:absolute;
+	width:25px;
+	height:25px;
+	top:192px;
+	left:-13px;
+	background:url(../images/s_circle.png) 0px/100% 100% no-repeat;
+	text-align:center;
+	font:14px/130px Verdana, Geneva, sans-serif;
+	color:#fff;
+}
+
+#Home>span{
+	position:absolute;
+	display:block;
+	top:-90px;
+	left:-11px;
+	
+}
+#About>span{
+	position:absolute;
+	display:none;
+	left:0px;
+	top:-30px;
+}
+#Work>span{
+	position:absolute;
+	display:none;
+	left:0px;
+	top:-30px;
+}
+#Contact>span{
+	position:absolute;
+	display:none;
+	left:0px;
+	top:-30px;
+}
+#stage>div:hover>span{
+	display:block;
+}
+#stage>div:hover{
+	cursor:pointer;
+}
+
+/********************************/
+
+#contents{
+	position:absolute;
+	width:40%;
+	height:80%;
+	top:50%;
+	left:100%;
+	transform:translateY(-50%);
+	background-color:#000;
+	opacity:0.3;
+	border-radius:10px;
+	/*display:none;*/
+}
+#contents>h1{
+	margin:30px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#fff;
+}
+
+
+

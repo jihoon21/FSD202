@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery UI를 이용한 커브 애니메이션</title>
+<link rel="stylesheet" type="text/css" href="jQuery_audio/audioplayer.css">
+<script src="jquery-1.7.2.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="jQuery_audio/audioplayer.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+//		$(".earth").click(function(){
+//			circle(".earth",250);
+//		});// click
+//		
+//		$(".pluto").click(function(){
+//			circle(".pluto",170);
+//		});// click
+//		
+//		$(".jupiter").click(function(){
+//			circle(".jupiter",400);
+//		});// click
+		
+		// 호출셋팅
+		setTimeout('circle(".earth",250)',1000);//지구
+		setTimeout('circle(".pluto",170)',2000);//명왕성
+		setTimeout('circle(".jupiter",400)',3000);//목성
+		
+		
+		
+		/*
+곡선 애니메이션
+
+$(선택자).animate({CSS설정},{스페셜이징})
+
+-스페셜 이징 구성요소
+1. duration: 애니메이션 시간
+2. specialEasing : 곡선효과를 주는 easing사용
+3. complete : 애니메이션 완료 후 함수설정
+		
+		
+		
+		
+		*/
+		
+		
+		
+		
+		
+	});///jQB/////////////////////////////
+	
+	
+	/*///////////////////////////////////////////////
+		함수명: circle
+		기능: 행성을 원형궤도로 회전시킨다.	
+	*///////////////////////////////////////////////
+	function circle(clsnm,size){
+		//clsnm-행성의 class명, size-행성크기
+		$(clsnm)
+			.animate({//1. 하단1
+				top:"+=200px",left:"+=500px",
+				width: size+"px", height: size+"px"
+			},{//스페셜이징
+				duration: 900,
+				specialEasing:{
+					top:"easeOutQuad",
+					left:"easeInQuad"}
+			})/////////////////////////////////////
+			.animate({//2. 하단2
+				top:"-=200px",left:"+=500px"
+			},{//스페셜이징
+				duration: 900,
+				specialEasing:{
+					top:"easeInQuad",
+					left:"easeOutQuad"}
+			})/////////////////////////////////////////
+			.animate({//3. 상단1
+				top:"-=200px",left:"-=500px",
+				width: "30px", height: "30px"
+			},{//스페셜이징
+				duration: 1500,
+				specialEasing:{
+					top:"easeOutQuad",
+					left:"easeInQuad"}
+			})///////////////////////////////////////////
+			.animate({//4. 상단2
+				top:"+=200px",left:"-=500px"
+			},{//스페셜이징
+				duration: 1500,
+				specialEasing:{
+					top:"easeInQuad",
+					left:"easeOutQuad"},
+				//완료후 실행함수(함수자신을 호출-재귀호출)
+				complete: function(){circle(clsnm,size);}
+			});/////////////////////////////////////////////
+	}////// circle함수 //////////////////////////////
+	
+	
+	
+	
+
+</script>
+
+<style type="text/css">
+body, html{
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	background:url(img/space.jpg) 0px/100% 100% no-repeat;
+	overflow:hidden;
+}
+
+
+.earth { /*지구*/
+	position: absolute; 
+	width: 80px; 
+	height: 80px; 
+	border-radius: 130px;
+	-moz-border-radius: 130px; -webkit-border-radius: 130px; 
+	background:url(img/earth.png) 0px/100% 100% no-repeat;
+	top: 205px; 
+	left: 285px;
+	z-index: 1;
+}
+
+.sun { /*태양*/
+	position: absolute; 
+	width: 250px; 
+	height: 250px; 
+	background:url(img/sun.png) 0px/100% 100% no-repeat;
+	border-radius: 130px;
+	-moz-border-radius: 130px; 
+	-webkit-border-radius: 130px; 
+	top: 150px; 
+	left: 485px;
+}
+.pluto { /*명왕성*/
+	position: absolute; 
+	width: 50px; 
+	height: 50px; 
+	background:url(img/pluto.png) 0px/100% 100% no-repeat;
+	border-radius: 130px;
+	-moz-border-radius: 130px; -webkit-border-radius: 130px; 
+	top: 205px; 
+	left: 85px;
+	z-index: 1;
+}
+
+.jupiter { /*목성*/
+	position: absolute; 
+	width: 150px; 
+	height: 150px; 
+	background:url(img/jupiter.png) 0px/100% 100% no-repeat;
+	border-radius: 50px;
+	-moz-border-radius: 50px; -webkit-border-radius: 50px; 
+	top: 205px; 
+	left: 135px;
+	z-index: 1;
+}
+#wrapper{display:none;}
+</style>
+</head>
+
+<body>
+<div class="earth"></div>
+<div class="sun"></div>
+<div class="pluto"></div>
+<div class="jupiter"></div>
+
+<!--배경음악 mp3 오디오삽입하기-->
+<audio src="jQuery_audio/audio/Alesso Feat. Matthew Koma - Years.mp3" autoplay loop preload="auto" controls></audio>
+
+
+
+
+</body>
+</html>

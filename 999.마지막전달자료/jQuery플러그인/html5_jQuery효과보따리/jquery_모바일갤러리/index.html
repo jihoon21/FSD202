@@ -1,0 +1,76 @@
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="/js/"></script>
+</head>
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="klass.min.js"></script>
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="code.photoswipe.jquery-2.1.6.min.js"></script>
+	<script type="text/javascript">
+	window.addEventListener("load", function(){
+		setTimeout(loaded, 100);
+	}, false);
+
+	function loaded(){
+		window.scrollTo(0, 1); // 요 부분이 핵심!
+	}
+	</script>
+	<script type="text/javascript">
+		(function(window, $, PhotoSwipe){
+		
+			$(document).ready(function(){
+				
+				var options = {};
+				$("#Gallery a").photoSwipe(options);
+			
+			});
+			
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+	</script>
+
+<body>
+	<div id="wrap">
+		<div class="contents gall_list">
+			
+			<div class="list_wrap">
+				<div class="list_top">
+				</div>
+			
+				<ul id="Gallery" class="gallery">
+				
+				
+					<li><a href="1_01.jpg"><img src="1_01.jpg" alt="3464684648"></a></li>
+			
+					<li><a href="1_02.jpg"><img src="1_02.jpg" alt="3464684648"></a></li>
+			
+					<li><a href="1_03.jpg"><img src="1_03.jpg" alt="3464684648"></a></li>
+			
+					<li><a href="1_04.jpg"><img src="1_04.jpg" alt="3464684648"></a></li>
+			
+					<li><a href="1_06.jpg"><img src="1_06.jpg" alt="3464684648"></a></li>
+			
+					<li><a href="1_07.jpg"><img src="1_07.jpg" alt="3464684648"></a></li>
+			
+					<li><a href="1_08.jpg"><img src="1_08.jpg" alt="3464684648"></a></li>
+			
+					<li><a href="1_09.jpg"><img src="1_09.jpg" alt="3464684648"></a></li>
+
+					<li><a href="1_10.jpg"><img src="1_10.jpg" alt="3464684648"></a></li>
+				
+								
+				</ul>
+			
+			</div>
+
+		
+	</div>
+</body>
+</html>

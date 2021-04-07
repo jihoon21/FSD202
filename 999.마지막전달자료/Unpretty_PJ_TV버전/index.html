@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unpretty PJ</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script>
+var vm=[
+	"oVe_Q0hKeoI",//애쉬비
+	"5mSLSvrB4fM",//엑시
+	"DieUcypdccM",//헤이즈
+	"3-8En4dZTYY",//효린
+	"_fDg9ufYf3k",//전지윤
+	"-LpVehQNKnM",//캐스퍼
+	"8TwuJvKGU2k",//키디비
+	"OKypvk9rJv4",//수아
+	"3fYMJgxiYtY",//트루디
+	"9k_GBBqH9mg"//유빈
+];
+
+$(document).ready(function(e) {
+    //랩퍼존의 div를 클릭하면 로고가 커지면서 나오고 
+	//TV가 나타난후 동영상재생
+	$("#star>div").click(function(){
+		var idx = $(this).index();//div순번
+		//console.log(idx);
+		//1. 로고가 앞으로 나옴, 크기커짐
+		$("#logo").css({"z-index":1})
+		.animate({width:"500px",height:"400px"},400)
+		.delay(1200)
+		.animate({width:"365px",height:"283px",zIndex:0},400);
+		//2. tv가 2초후 0.4초간 등장(fadeIn)->동영상 play (iframe삽입)
+		$("#tv").delay(2000).fadeIn(400)
+		.html('<iframe width="300px" height="250px" src="https://www.youtube.com/embed/'+vm[idx]+'?autoplay=1" frameborder="0"></iframe>')
+		.append("<div id='close'>×</div>");
+		
+		$("#close").click(function(){
+			$("#tv").hide().html("");//display:none->내용지우기			
+		});
+		
+	});//click
+	
+	
+	
+	
+	
+});//jQb
+
+
+</script>
+</head>
+
+<body>
+<section id="wrap">
+	<article><!--큰별-->
+    	<img src="images/unpretty_bg_star.png" alt="star">
+    </article>
+	<header id="logo"><!--로고-->
+    	<img src="images/unpretty_logo.png" alt="logo">
+    </header>
+    <nav id="star"><!--랩퍼존-->
+    	<div><!--1.애쉬비oVe_Q0hKeoI-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--애쉬비-->
+        </div>
+    	<div><!--2.엑시-TAVcJkwRIA-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--엑시-->
+        </div>
+    	<div><!--3.헤이즈-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--헤이즈-->
+        </div>
+    	<div><!--4.효린-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--효린-->
+        </div>
+    	<div><!--5.전지윤-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--전지윤-->
+        </div>
+    	<div><!--6.캐스퍼-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--캐스퍼-->
+        </div>
+    	<div><!--7.키디비-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--키디비-->
+        </div>
+    	<div><!--8.수아-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--수아-->
+        </div>
+    	<div><!--9.트루디-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--트루디-->
+        </div>
+    	<div><!--10.유빈-->
+        	<aside></aside><!--TV-->
+        	<aside></aside><!--유빈-->
+        </div>
+    </nav>
+    
+    <section id="tv"></section>
+
+</section><!--전체부모-->
+
+
+
+</body>
+</html>

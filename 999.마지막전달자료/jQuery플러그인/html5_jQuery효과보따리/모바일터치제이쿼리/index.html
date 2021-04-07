@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="main01.css" media="screen, projection"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.touchSwipe-1.2.5.js"></script>
+<script type="text/javascript" src="jquery.baramangSwipe-1.0.js"></script>
+<script type="text/javascript" src="baramangSwipeTemplate.js"></script>
+
+<div class="rolling_box">
+	<section class="promotion">
+		<div class="slidings"> 
+			<div style="width:230px; height: 150px; position: relative; margin-top:40px;" id="promotionBanner" class="wrap" elementposition="0">
+				<figure style="left:0; width:230px; position: absolute;" elementindex="0" elementposition="">
+					<img src="banner01.jpg" width="230" height="143"  alt="이벤트">
+					<figcaption></figcaption>
+				</figure>
+				<figure style="left:230px; width:230px; position: absolute;" elementindex="1" elementposition="">
+					<img src="banner02.jpg" width="230" height="143" alt="이벤트">
+					<figcaption></figcaption>
+				</figure>
+				<figure style="left: 460px; width:230px; position: absolute;" elementindex="2" elementposition="">
+					<img src="banner03.jpg" width="230" height="143" alt="이벤트">
+					<figcaption></figcaption>
+				</figure>
+				<figure style="left: 460px; width:230px; position: absolute;" elementindex="3" elementposition="">
+					<img src="banner04.jpg" width="230" height="143" alt="이벤트">
+					<figcaption></figcaption>
+				</figure>
+			</div>
+		</div>
+			<p id="promotionBannerPagination" class="pagination" title="프로모션 순서">
+				<span class="active"></span><span></span><span></span><span></span>
+			</p>
+	</section>
+<script type="text/javascript">
+BaramangSwipe.template.promotionBanner("#promotionBanner", "p#promotionBannerPagination").load();
+</script>
+</div>

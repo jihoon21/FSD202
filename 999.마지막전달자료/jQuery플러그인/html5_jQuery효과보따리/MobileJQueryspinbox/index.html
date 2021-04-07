@@ -1,0 +1,62 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>jQueryMobile - Spinbox Demo</title>
+	<link href="http://code.jquery.com/mobile/latest/jquery.mobile.css" rel="stylesheet" type="text/css" />
+	
+	<!-- NOTE: Script load order is significant! -->
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="jqm-spinbox.js"></script>
+	
+	<script type="text/javascript" src="http://dev.jtsage.com/gpretty/prettify.js"></script>
+	<link type="text/css" href="http://dev.jtsage.com/gpretty/prettify.css" rel="stylesheet" />
+	<script type="text/javascript">
+		$('div').live('pagecreate', function() {
+			prettyPrint()
+		});
+	</script>
+</head>
+<body>
+<div data-role="page" data-theme="b" id="main"> 
+	<div data-role="header" data-position="fixed"> 
+		<h1>jQueryMobile - Spinbox</h1>
+	</div>
+	<div data-role="content">
+
+		<h2>Standard Size</h2>
+		<div data-role="fieldcontain">
+			<label for="aa1">Text Compare</label>
+			<input name="aa1" type="text" id="aa1"/>
+		</div>
+		<div data-role="fieldcontain">
+			<label for="slider-0">Slider Compare</label>
+			<input type="range" name="slider" id="slider-0" value="60" min="0" max="100" />
+		</div>
+		<div data-role="fieldcontain">
+			<label for="spin">Input Spinner</label>
+			<input type="text" data-role="spinbox" name="spin" id="spin" value="60" min="0" max="100" />
+		</div>
+		
+		<h2>data-mini="true" Size</h2>
+		<div data-role="fieldcontain">
+			<label for="aa2">Text Compare</label>
+			<input name="aa2" type="text" data-mini="true" id="aa2"/>
+		</div>
+		<div data-role="fieldcontain">
+			<label for="slider-2">Slider Compare</label>
+			<input type="range" name="slider" id="slider-2" data-mini="true" value="60" min="0" max="100" />
+		</div>
+		<div data-role="fieldcontain">
+			<label for="spin">Input Spinner</label>
+			<input type="text" data-mini="true" data-role="spinbox" name="spin" id="spin" value="60" max="100" />
+		</div>
+	</div>
+	
+</div>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<link href="style.css" rel="stylesheet" />
+<title>드롭 다운 메뉴</title>
+
+<script type="text/javascript">
+$(document).ready(function(){  
+  
+    $("ul.subnav").parent().append("<span></span>"); //제이쿼리 시동하고 ul.subnav뒤에 비어있는 span태그를 추가  
+  
+    $("ul.topnav li span").click(function() { //클릭시 다음 이벤트를 subnav에 적용 
+  
+        $(this).parent().find("ul.subnav").slideDown('fast').show(); //클릭시 subnav을 아래로 내림
+  
+        $(this).parent().hover(function() {  
+        }, function(){  
+            $(this).parent().find("ul.subnav").slideUp('slow'); //마우스 벗어났을때 원위치시킴  
+        });  
+  
+        
+        }).hover(function() {  
+            $(this).addClass("subhover"); //마우스 오버시 subhover 클래스 추가  
+        }, function(){  //On Hover Out  
+            $(this).removeClass("subhover"); //마우스 아웃시 subhover클래스 제거  
+    });  
+  
+});  
+</script>
+</head>
+
+<body>
+<div class="container">
+<div id="header">
+<ul class="topnav">  
+    <li><a href="#">Home</a></li>  
+    <li>  
+        <a href="#">Tutorials</a>  
+        <ul class="subnav">  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li> 
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+ 
+        </ul>  
+    </li>  
+    <li>  
+        <a href="#">Resources</a>  
+        <ul class="subnav">  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+              
+        </ul>  
+    </li>  
+    <li><a href="#">About Us</a>
+		<ul class="subnav">  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+              
+        </ul>  
+	</li>  
+    <li><a href="#">Advertise</a>
+		<ul class="subnav">  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+            <li><a href="#">Sub Nav Link</a></li>  
+              
+        </ul>  
+	</li>  
+    <li><a href="#">Submit</a></li>  
+    <li><a href="#">Contact Us</a></li>  
+</ul>
+</div>
+</div>  
+</body>
+</html>

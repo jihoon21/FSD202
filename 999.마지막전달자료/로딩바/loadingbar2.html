@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>loading bar</title>
+<style>
+#loading{
+	width:500px;
+	height:80px;
+	border:1px solid #ccc;
+}
+#bar{
+	width:0%;
+	height:100%;
+	background-color:red;
+	font:bold 20px/80px Verdana, Geneva, sans-serif;
+}
+
+</style>
+<script>
+window.onload=function(){
+	setTimeout("loading()",1000);
+
+}
+
+var pers=0;//퍼센트
+function loading(){
+	var tg = document.getElementById("bar");
+	pers++;
+	tg.style.width = pers+"%";
+	tg.innerHTML = pers + "%";
+	tg.style.transition="width 0.1s";
+	
+	if(pers<70)
+	{
+		setTimeout("loading()",100);
+	}
+}
+</script>
+</head>
+
+<body>
+<aside id="loading">
+	<div id="bar">0%</div>
+</aside>
+
+</body>
+</html>

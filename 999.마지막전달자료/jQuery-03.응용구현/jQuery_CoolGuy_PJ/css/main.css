@@ -1,0 +1,90 @@
+@charset "utf-8";
+html,body{
+	padding:0px;
+	margin:0px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+body{
+	background:url(../images/bg1.png) 0px/100% 100% no-repeat;	
+}
+/*쿨가이*/
+#cool{
+	position: absolute;
+	width: 30%;
+	bottom: -100%;
+	left: 10%;
+}
+#cool img{
+	width: 100%;
+}
+
+/*메인 남녀*/
+#mw{
+	position: absolute;
+	width: 50%;
+	bottom: -2%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#mw img{
+	width: 100%;
+	height: auto;
+}
+
+/*메인 타이틀*/
+#mTitle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	font: bold 2.5em Verdana;
+	color: #333;
+	text-shadow: 0 0 5px #fff;
+	cursor: pointer;
+}
+
+/*메뉴디자인*/
+#menu{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#menu div{
+	position:relative;
+	display:inline-block;
+}
+#menu div:first-child, #menu div:nth-child(2){
+	z-index:1;
+}
+
+#menu div:first-child img{/*로고*/
+	height:56px;
+	width:auto;
+}
+#menu div:last-child{/*메뉴*/
+	top:-20px;
+	left:-100%;/*화면밖으로*/
+}
+#menu div:last-child ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	background-color:#fff;
+}
+#menu div:last-child ul li{
+	display:inline-block;
+	line-height:56px;
+	padding:0 10px;
+}
+
+
+
+
+
+
+
+
+
