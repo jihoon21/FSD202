@@ -147,95 +147,99 @@ a {
 /*전체배너박스*/
 #ban {
     position: relative;
-    width: 100%;
-    height: calc(100vh - 80px)
+    width: 100vw;
+    height: 320vh;
 }
 
-#ban>ul {
+#ban > ul {
+    position: relative;
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: 320vh;
+    overflow: hidden;
+    background: #000;
 }
 
 /*배너이미지 등분할*/
-#ban>ul>li {
+#ban > ul > li {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+#ban > ul > li:first-child {
+    width: 84%;
+}
+
+#ban > ul > li:nth-child(2) {
+    width: 8%;
+}
+
+#ban > ul > li:last-child {
+    width: 8%;
+}
+
+#ban > ul > li:nth-child(1) {
+    background: #1a281c url(../images/mainCon_bg1.jpg) no-repeat left top;
+}
+
+#ban > ul > li:nth-child(2) {
+    background: #888 url(../images/mainCon_bg2.jpg) no-repeat top;
+    opacity: 0.3;
+}
+
+#ban > ul > li:nth-child(3) {
+    background: #000 url(../images/mainCon_bg3.jpg) no-repeat top;
+    opacity: 0.3;
+}
+
+/* 영역박스 */
+.parent{
     position: relative;
-    flex: 1;
+    /* 버튼부모자격 */
 }
 
-/*배너이미지 마우스 오버시 커서 보이기*/
-#ban>ul>li:hover {
-    cursor: pointer;
-}
-
-#ban>ul>li::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #000;
-    opacity: .5;
-    transition: opacity .5s;
-}
-
-#ban>ul>li:hover::after {
-    opacity: 0;
-}
-
-#ban>ul>li:nth-child(1) {
-    background: #1a281c url(../images/mainCon_bg1.jpg) no-repeat center top;
-}
-
-#ban>ul>li:nth-child(2) {
-    background: #888 url(../images/mainCon_bg2.jpg) no-repeat center;
-}
-
-#ban>ul>li:nth-child(3) {
-    background: #000 url(../images/mainCon_bg3.jpg) no-repeat center;
-}
 
 /*텍스트 박스*/
 .mainC {
     position: relative;
-    top: 40%;
-    left: 10%;
-    width: 90%;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
     height: 60%;
     border: 2px solid rgba(248, 0, 0, 0);
     box-sizing: border-box;
+    font-weight: bold;
 }
+
 
 /*첫번째 영어텍스트(이미지)*/
 .mainC li a img {
     position: absolute;
-    top: 15%;
-    left: 0%;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 85%;
 }
 
-.con2>li>a>img,
-.con3>li>a>img {
-    width: 35%;
+.con2,.con3{
+    display: none;
 }
 
-/*두번째 텍스트*/
+/*제목 텍스트*/
 .t1 {
     position: absolute;
-    top: 30%;
-    left: 0%;
-    font-size: 1.7rem;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.9rem;
+    font-weight: normal;
     color: #fff;
     letter-spacing: -2px;
     white-space: nowrap;
+    margin-top: 10px;
 }
 
-/*후원 사업 텍스트 위치조절*/
-.con1>.txt>.t1 {
-    margin-top: 30px;
-}
 
 /*작대기*/
 .t1::after {
@@ -245,17 +249,195 @@ a {
     height: 2px;
     background: #fff;
     margin-top: 30px;
+    margin-left: 40px;
 }
 
-/*마지막 텍스트*/
+/*두번째 텍스트*/
 .t2 {
     position: absolute;
-    top: 55%;
-    left: 0%;
-    font-size: 1rem;
+    top: 21%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
     color: #fff;
     letter-spacing: -2px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 40px;
 }
+/*세번째 텍스트*/
+.t3{
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: -2px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 20px;
+}
+/* 닫기버튼 */
+.cbtn{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    cursor: pointer;
+    z-index: 1;
+}
+/*컨텐츠영역박스*/
+.conArea{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* outline: 2px solid red; */
+}
+.mCont{
+    position: absolute;
+    top: 630px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 첫번째컨텐츠박스 */
+.box1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 400px;
+}
+/* 첫번째 이미지박스 */
+.box1 > .imgbox{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+/* 텍스트전체박스 */
+.conBox{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background: #fff;
+}
+/* 타이틀 */
+.txt1{
+    font-size: 32px;
+    color: #000;
+    margin-top: 80px;
+    font-weight: bold;
+}
+/* 일직선 바 */
+.bar span{
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    background: #b2b2b2;
+}
+.txt2{
+    font-size: 12px;
+    color: #797979;
+    line-height: 1.5;
+    margin-top: 15px;
+    word-break: keep-all;
+}
+/* 신청하기버튼 */
+.mBtnArea{
+    text-align: center;
+}
+/* 자세히보기버튼 */
+.mBtnArea2 {
+    margin-top: 0
+}
+/* 바탕 초록색버튼 */
+.mGrnBtn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+    width: 180px;
+    background: #3eb134;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    border-radius: 23px;
+    margin-top: 10px;
+}
+/* 바탕 회색버튼 */
+.mGrayBtn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 0;
+    width: 180px;
+    background: #c0c0c0;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    border-radius: 23px;
+    margin-top: 10px;
+}
+/* 두번째컨텐츠박스 */
+.box2{
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 400px;
+}
+/* 두번째 이미지박스 */
+.box2 > .img2{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+/* 세번째컨텐츠박스 */
+.box3{
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 400px;
+}
+/* 세번째 이미지박스 */
+.box3 > .img3{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img3.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+/* 네번째컨텐츠박스 */
+.box4{
+    position: absolute;
+    top: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 400px;
+}
+/* 네번째 이미지박스 */
+.box4 > .img4{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url(../images/mMainCon1_img4.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
 
 /********************* 하단 영역 **************************/
 /*하단영역*/
@@ -389,15 +571,17 @@ a {
 
 /********************* 미디어 쿼리 *********************/
 
-/*1200px이하*/
-@media only screen and (max-width: 1280px) {
+/*1100px이하*/
+@media only screen and (max-width: 1100px) {
 
-    .t2 {
-        display: none;
+    /* 버튼 셋팅 */
+    .mGrnBtn{
+        width: 130px;
+        font-size: 12px;
     }
-
-    .t1::after {
-        display: none;
+    .mGrayBtn{
+        width: 130px;
+        font-size: 12px;
     }
 
 }
@@ -425,33 +609,16 @@ a {
 @media only screen and (max-width: 850px) {
 
 
-    /*배너 밑으로 흐르게*/
-    #ban>ul {
-        flex-direction: column;
+    
+
+    /* 버튼 셋팅 */
+    .mGrnBtn{
+        width: 110px;
+        font-size: 10px;
     }
-
-    #ban>ul>li:first-child {
-        background-position: center -500px;
-
-    }
-
-    .mainC {
-        top: 50px;
-        left: 0;
-    }
-
-    /*배너 안에 텍스트이미지 크기조절*/
-    .mainC li a img {
-        width: 130px;
-    }
-
-    /*첫번째 텍스트이미지 크기조절*/
-    .con1>.txt>a>img {
-        width: 250px;
-    }
-
-    .mainC>.txt>.t1 {
-        margin-top: 55px;
+    .mGrayBtn{
+        width: 110px;
+        font-size: 10px;
     }
 
 }
@@ -487,6 +654,37 @@ a {
 
 /*770px이하*/
 @media only screen and (max-width: 770px) {
+
+    /* 텍스트 세부조정 */
+    .t1{
+        top: 12%;
+    }
+    .t2{
+        top: 15%;
+        font-size: .9rem;
+    }
+    .t3{
+        top: 20%;
+        font-size: .8rem;
+    }
+    .t1::after{
+        margin-left: 28px;
+    }
+
+    
+
+    .conBox{
+        overflow: hidden;
+    }
+    .txt1{
+        font-size: 23px;
+    }
+    .txt2{
+        font-size: 9px;
+    }
+
+
+
 
 
     .info {
@@ -531,7 +729,7 @@ a {
     }
 
     /*패밀리박스 제거*/
-    .family {
+    #family {
         display: none;
     }
 
